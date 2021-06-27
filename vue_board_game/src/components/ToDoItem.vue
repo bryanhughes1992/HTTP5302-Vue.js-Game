@@ -7,8 +7,9 @@
 
 <script>
 export default {
-  setup() {
+  name: 'app',
+  components: {
 
-  },
-}
+  }
+};
 </script>
