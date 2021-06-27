@@ -3,7 +3,7 @@
     <h1>To-Do List</h1>
     <ul>
       <li v-for="item in ToDoItems" v-bind:key="item.id">
-        <to-do-item label="My ToDo Item" v-bind:done="true"></to-do-item>
+        <to-do-item v-bind:label="item.label" v-bind:done="item.done"></to-do-item>
       </li>
     </ul>
   </div>
@@ -11,7 +11,6 @@
 
 <script>
 import ToDoItem from './components/ToDoItem.vue';
-import uniqueId from 'lodash.uniqueid';
 export default {
   name: 'app',
   components: {
@@ -39,5 +38,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+li {
+  list-style: none;
+  text-align: left;
 }
 </style>
