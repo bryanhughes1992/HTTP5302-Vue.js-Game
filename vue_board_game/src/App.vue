@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="app">
     <h1>To-Do List</h1>
-    <to-do-form></to-do-form>
+    <to-do-form @todo-added="addToDo"></to-do-form>
     <ul>
       <li v-for="item in ToDoItems" v-bind:key="item.id">
         <to-do-item v-bind:label="item.label" v-bind:done="item.done" v-bind:id="item.id"></to-do-item>
@@ -29,6 +29,11 @@ export default {
         { label: "Understand Vue.js enough to create a boardgame before midnight", done: false }
       ]
     };
+  },
+  methods: {
+    addToDo() {
+      console.log("To-Do Added");
+    }
   }
 };
 </script>
