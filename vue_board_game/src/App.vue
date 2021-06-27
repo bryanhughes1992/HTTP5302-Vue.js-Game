@@ -13,6 +13,8 @@
 <script>
 import ToDoItem from './components/ToDoItem.vue';
 import ToDoForm from './components/ToDoForm.vue';
+import uniqueId from 'lodash.uniqueid';
+
 export default {
   name: 'app',
   components: {
@@ -32,7 +34,7 @@ export default {
   },
   methods: {
     addToDo(toDoLabel) {
-      console.log("To-Do Added", toDoLabel);
+      this.ToDoItems.push({id:uniqueId('todo-'), label: toDoLabel, done: false});
     }
   }
 };
