@@ -18,6 +18,10 @@
       done: {
         default: false,
         type: Boolean
+      },
+      id: {
+        required: true,
+        type: String
       }
     },
     data() {

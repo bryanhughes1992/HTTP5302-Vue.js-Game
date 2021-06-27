@@ -3,7 +3,7 @@
     <h1>To-Do List</h1>
     <ul>
       <li v-for="item in ToDoItems" v-bind:key="item.id">
-        <to-do-item v-bind:label="item.label" v-bind:done="item.done"></to-do-item>
+        <to-do-item v-bind:label="item.label" v-bind:done="item.done" v-bind:id="item.id"></to-do-item>
       </li>
     </ul>
   </div>
@@ -11,6 +11,7 @@
 
 <script>
 import ToDoItem from './components/ToDoItem.vue';
+
 export default {
   name: 'app',
   components: {
