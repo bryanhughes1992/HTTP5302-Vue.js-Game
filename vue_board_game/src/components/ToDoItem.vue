@@ -6,6 +6,9 @@
 </template>
 
 <script>
+  // Allows for dynamic id assignment
+  import uniqueId from 'lodash.uniqueid';
+
   export default {
     props: {
       label: {
